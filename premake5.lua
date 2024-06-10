@@ -15,6 +15,7 @@ project "glm"
 
   files {
     "premake5.lua",
+    "glm/**.inl",
     "glm/**.hpp",
     "glm/**.h",
   }
