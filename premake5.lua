@@ -1,5 +1,7 @@
 -- glm
 
+require("premake", ">=5.0.0-beta6")
+
 project "glm"
   kind "None"
   language "C++"
@@ -9,10 +11,6 @@ project "glm"
   targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
   objdir ("%{wks.location}/build/" .. outputdir .. "%{prj.name}")
 
-  IncludeDir["glm"] = "%{wks.location}/libs/glm"
-
-  includedirs {}
-
   files {
     "premake5.lua",
     "glm/**.natvis",
@@ -20,3 +18,6 @@ project "glm"
     "glm/**.hpp",
     "glm/**.h",
   }
+
+  usage "INTERFACE"
+    includedirs { "./" }
