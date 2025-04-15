@@ -20,5 +20,8 @@ project "glm"
   }
 
   usage "INTERFACE"
-    defines { "GLM_FORCE_RADIANS" }
+    defines {
+      "GLM_FORCE_RADIANS",
+      "GLM_FORCE_DEPTH_ZERO_TO_ONE"
+    }
     includedirs { "./" }
