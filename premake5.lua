@@ -21,7 +21,8 @@ project "glm"
 
   usage "INTERFACE"
     defines {
-      "GLM_FORCE_RADIANS",
-      "GLM_FORCE_DEPTH_ZERO_TO_ONE"
+      "GLM_FORCE_RADIANS",          -- Ensures GLM uses radians
+      "GLM_ENABLE_EXPERIMENTAL",    -- enables experimental features like std::hash<>() implementation for GLM types
+      "GLM_FORCE_DEPTH_ZERO_TO_ONE" -- Ensures GLM uses depth range [0,1] instead of the OpenGL's [-1,1]
     }
     includedirs { "./" }
